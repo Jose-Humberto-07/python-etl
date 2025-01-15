@@ -24,13 +24,15 @@ time.sleep(3)
 
 # Passo 2: Fazer login
 # selecionar o campo de email
-pyautogui.click(x=685, y=451)
+pyautogui.click(x=710, y=368)
 # escrever o seu email
 pyautogui.write("pythonimpressionador@gmail.com")
 pyautogui.press("tab") # passando pro próximo campo
 pyautogui.write("sua senha")
-pyautogui.click(x=955, y=638) # clique no botao de login
+pyautogui.click(x=972, y=526) # clique no botao de login
 time.sleep(3)
+
+
 
 # Passo 3: Importar a base de produtos pra cadastrar
 import pandas as pd
@@ -42,7 +44,7 @@ print(tabela)
 # Passo 4: Cadastrar um produto
 for linha in tabela.index:
     # clicar no campo de código
-    pyautogui.click(x=653, y=294)
+    pyautogui.click(x=786, y=255)
     # pegar da tabela o valor do campo que a gente quer preencher
     codigo = tabela.loc[linha, "codigo"]
     # preencher o campo
@@ -68,3 +70,6 @@ for linha in tabela.index:
     # dar scroll de tudo pra cima
     pyautogui.scroll(5000)
     # Passo 5: Repetir o processo de cadastro até o fim
+
+
+
